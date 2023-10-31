@@ -10,15 +10,15 @@ BEGIN
     DECLARE biglietto_prezzo FLOAT;
     -- Prelevo il prezzo dello snack
     SET snack_prezzo = (SELECT prezzo 
-						FROM Snack s
+	    		FROM Snack s
                         WHERE s.idsnack = NEW.idsnack);
 	-- Prelevo il prezzo del biglietto
     SET biglietto_prezzo = (SELECT prezzo 
-							FROM Biglietto b 
-                            WHERE b.idbiglietto = NEW.idbiglietto);
+	    		    FROM Biglietto b 
+	    		    WHERE b.idbiglietto = NEW.idbiglietto);
     -- COALESCE restituisce il primo valore NOT NULL in una lista di valori
     UPDATE Cassa SET incassogiornaliero = incassogiornaliero + 
-        COALESCE(snack_prezzo, 0) + COALESCE(biglietto_prezzo, 0)
+	    COALESCE(snack_prezzo, 0) + COALESCE(biglietto_prezzo, 0)
     WHERE numerocassa = NEW.idcassa
     AND giorno = NEW.data;
 END $$
@@ -32,7 +32,7 @@ BEFORE INSERT ON Vendita
 FOR EACH ROW
 BEGIN
     IF NOT EXISTS (SELECT * 
-				   FROM Cassa
+		   FROM Cassa
                    WHERE giorno = NEW.data)
 	THEN
         INSERT INTO Cassa (numerocassa, incassogiornaliero,giorno) 
@@ -50,7 +50,7 @@ FOR EACH ROW
 BEGIN
     UPDATE Sala SET postidisponibili = postidisponibili - 1, nspettatori = nspettatori + 1 
     WHERE idsala = (SELECT idsala 
-					FROM Biglietto 
+		    FROM Biglietto 
                     WHERE idbiglietto = NEW.idbiglietto);
 END $$
 
