@@ -1,4 +1,4 @@
-use cinema;
+USE `cinema`;
 
 -- test vendita biglietti dove il numero di posti disponibili è 1, e poi 0 (quindi bisogna registrare 2 vendite)
 /*
@@ -13,7 +13,7 @@ INSERT INTO Vendita (idcassa, idbiglietto, idsnack, data) VALUES
 */
 
 
-select * from vendita;
-select * from sala;
-select * from biglietto;
-select * from cassa;
+SELECT * FROM vendita;
+SELECT * FROM sala;
+SELECT * FROM biglietto;
+SELECT * FROM cassa;

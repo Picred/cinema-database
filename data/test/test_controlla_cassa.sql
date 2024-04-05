@@ -1,4 +1,4 @@
-USE Cinema;
+USE `cinema`;
 
 -- Ogni volta che inserisco una vendita nuova, in quel momento, aggiungo tale vendita in Cassa con il relativo giorno e incassogiornaliero, inizializzato a 0 e poi incrementato con il valore di vendita
 

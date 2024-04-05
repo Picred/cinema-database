@@ -1,4 +1,4 @@
-Use Cinema;
+Use `cinema`;
 
 -- Aggiungo una vendita di un biglietto e poi verifico se i posti in quella sala si modificano
 SELECT idbiglietto, idsala
