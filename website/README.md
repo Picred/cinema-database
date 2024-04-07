@@ -4,6 +4,7 @@ La documentazione del progetto è presente [qui](https://github.com/picred/cinem
 
 # Prerequisites
 
+- PHP
 - Composer
 - Laravel
 - MySQL
@@ -14,6 +15,8 @@ La documentazione del progetto è presente [qui](https://github.com/picred/cinem
 ### Installazione Composer
 [Placeholder]
 
+composer global require laravel/installer
+
 ### Installazione Laravel
 [Placeholder]
 
@@ -22,6 +25,38 @@ La documentazione del progetto è presente [qui](https://github.com/picred/cinem
 [Placeholder]
 
 #### Utilities
+PHP modules:
+
+`sudo apt install php-bcmath php-mbstring php-mysql php-xml php-curl`
+
+Check installazione moduli:
+
+```bash
+$ php -m | grep -Ei '(bcmath|ctype|fileinfo|json|mbstring|openssl|pdo|tokenizer|^xml$|curl)'
+bcmath    # installata a parte, in quanto NON dipendenza di PHP su Ubuntu 18.04
+ctype
+curl
+fileinfo
+json
+mbstring  # installata a parte, in quanto NON dipendenza di PHP su Ubuntu 18.04
+openssl
+pdo_mysql # installata a parte, in quanto NON dipendenza di PHP su Ubuntu 18.04
+tokenizer
+xml       # installata a parte, in quanto NON dipendenza di PHP su Ubuntu 18.04
+```
+
+Avere sempre php con versioni fresce: 
+
+```bash
+$ sudo add-apt-repository ppa:ondrej/php # ondrej/php è il repository deb semi-ufficiale per PHP 
+$ sudo apt update
+$ sudo apt upgrade php php-bcmath php-mbstring php-mysql php-xml php-curl -y # si aggiornano esplicitamente anche i pacchetti necessari, per sicurezza
+
+$ sudo update-alternatives --config php # dal menu proposto, si scelga PHP 8.x come nuovo default
+$ php -v # PHP 8.1.2 (cli) (built: Jan 24 2022 10:42:15) (NTS)
+```
+
+
 Per aggiungere un user con tutti i permessi sul database si può usare 
 
 ```sql
