@@ -1,0 +1,22 @@
+{
+  "name": "cinema-database",
+  "version": "1.0.0",
+  "description": "# INDICE - [Documentazione](https://github.com/Picred/cinema-database/blob/main/Documentazione.pdf) - [Script](https://github.com/Picred/cinema-database/tree/main/script)",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Picred/cinema-database.git#main"
+  },
+  "author": "Andrei Daniel Stefan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Picred/cinema-database/issues"
+  },
+  "homepage": "https://github.com/Picred/cinema-database/tree/main#readme",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
