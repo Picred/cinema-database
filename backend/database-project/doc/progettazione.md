@@ -1,6 +1,6 @@
-![](001.png)
+![](img/001.png)
 
-2022/2023  PROGETTO DI ![](002.png)![](003.png)
+2022/2023  PROGETTO DI ![](img/002.png)![](img/003.png)
 
 BASI DI DATI 
 
@@ -91,14 +91,14 @@ Per la base di dati in questione si sceglie una strategia bottom-up dove vengono
 
 **PASSO 1** 
 
-![](004.png)
+![](img/004.png)
 
 - Trasformazione T1: Dal concetto di film è stata individuata l’entità Film 
 - Trasformazione T4: Gli attributi dell’entità Film sono *idfilm, titolo* 
 
 **PASSO 2** 
 
-![](005.png)
+![](img/005.png)
 
 - Trasformazione T1: Dal concetto di horror è individuata l’entità Horror. 
 - Trasformazione T4: L’attributo dell’entità Horror è *nome* 
@@ -113,113 +113,113 @@ Visto che la generalizzazione è di tipo totale ed esclusiva, si decide di crear
 - Trasformazione T4: Gli attributi dell’entità Genere sono *idgenere*, *nome* 
 
 
-![](006.png)
+![](img/006.png)
 
 **PASSO 3** 
 
-![](007.png)
+![](img/007.png)
 
 - Trasformazione T1: Dal concetto di feedback è stata individuata l’entità Feedback 
 - Trasformazione T4: Gli attributi dell’entità Feedback sono *idfeedback, valutazione* 
 
 **PASSO 5** 
 
-![](008.png)
+![](img/008.png)
 
 - Trasformazione T2: È stata individuata la relazione fra Feedback e Film 
 
-![](009.png)
+![](img/009.png)
 
 - Trasformazione T1: Dal concetto di sala è stata individuata l’entità Sala
 - Trasformazione T4: Gli attributi dell’entità Sala sono *idsala, nspettatori, postidisponibili*
 
 **PASSO 6** 
 
-![](010.png)
+![](img/010.png)
 
 - Trasformazione T2: È stata individuata la relazione fra Film e Sala 
 
 **PASSO 7** 
 
-![](011.png)
+![](img/011.png)
 
 - Trasformazione T1: Dal concetto di biglietto è stata individuata l’entità Biglietto 
 - Trasformazione T4: Gli attributi dell’entità Biglietto sono *idbiglietto, prezzo* 
 
 **PASSO 8** 
 
-![](012.png)
+![](img/012.png)
 
 - Trasformazione T2: È stata individuata la relazione fra Sala e Biglietto 
 
 **PASSO 9** 
 
-![](013.png)
+![](img/013.png)
 
 - Trasformazione T1: Dal concetto di snack è stata individuata l’entità Snack 
 - Trasformazione T4: Gli attributi dell’entità Snack *sono idsnack, nome, prezzo* 
 
 **PASSO 10** 
 
-![](014.png)
+![](img/014.png)
 
 - Trasformazione T1: Dal concetto di vendita di un prodotto è stata individuata l’entità Vendita 
 - Trasformazione T4: Gli attributi dell’entità Vendita sono *data, idvendita* 
 
 **PASSO 11.0** 
 
-![](015.png)
+![](img/015.png)
 
 - Trasformazione T2: È stata individuata l’associazione fra l’entità Biglietto e l’entità Vendita 
 
 **PASSO 11.1** 
 
-![](016.png)
+![](img/016.png)
 
 - Trasformazione T2: È stata individuata l’associazione fra l’entità Snack e l’entità Vendita 
 
 **PASSO 12** 
 
-![](017.png)
+![](img/017.png)
 
 - Trasformazione T1: Dal concetto di cassa è stata individuata l’entità Cassa. 
 - Trasformazione T4: Gli attributi dell’entità Cassa sono *giorno, numerocassa, incassogiornaliero* 
 
 **PASSO 13** 
 
-![](018.png)
+![](img/018.png)
 
 - Trasformazione T2: È stata individuata l’associazione fra Vendita e Cassa 
 
 **PASSO 14** 
 
-![](019.png)
+![](img/019.png)
 
 - Trasformazione T1: Dal concetto di operatore è stata individuata l’entità Operatore 
 - Trasformazione T4: Gli attributi dell’entità Operatore sono *cfoperatore, datanascita, nome, cognome* 
 
 **PASSO 15** 
 
-![](020.png)
+![](img/020.png)
 
 - Trasformazione T2: È stata individuata l’associazione fra Operatore e Cassa 
 
 **PASSO 16** 
 
-![](021.png)
+![](img/021.png)
 
 - Trasformazione T1: Dal concetto di turno è stata individuata l’entità Turno 
 - Trasformazione T4: Gli attributi dell’entità Turno sono *giorno, orainizio, orafine* 
 
 **PASSO 17**
 
-![](022.png)
+![](img/022.png)
 
 - Trasformazione T2: È stata individuata la relazione fra Operatore e Turno 
 
 **SCHEMA SCHELETRO / 2** 
 
-` `![](023.jpeg)
+` `![](img/023.jpeg)
 
 Vengono aggiunti gli attributi e le cardinalità. ![](024.jpeg)
 
@@ -228,7 +228,7 @@ Vengono aggiunti gli attributi e le cardinalità. ![](024.jpeg)
 
 Vengono eliminate le gerarchie 
 
-![](025.jpeg)
+![](img/025.jpeg)
 
 **DIZIONARIO DEI DATI** 
 
@@ -375,13 +375,13 @@ In conclusione, **CONVIENE MANTENERE LA RIDONDANZA *nspettatori***
 
 **CREAZIONE DEL DATABASE E TABELLE** 
 
-![](026.jpeg)
+![](img/026.jpeg)
 
-![](027.jpeg)
+![](img/027.jpeg)
 
-![](028.png)
+![](img/028.png)
 
-![](029.png)
+![](img/029.png)
 
 **TRIGGER con esempio** 
 
@@ -389,151 +389,151 @@ In conclusione, **CONVIENE MANTENERE LA RIDONDANZA *nspettatori***
 
 Ogni volta che si inserisce una nuova vendita per è necessario aggiornare, di conseguenza, l’incasso giornaliero. Ciò dipende dal tipo di prodotto acquistato e dalla cassa che effettua la vendita. 
 
-![](030.png)
+![](img/030.png)
 
 Per far funzionare il trigger verranno usati dei dati *di esempio* presenti nelle tabelle rispettivamente elencate successivamente: 
 
 *Biglietto* 
 
-![](031.png)
+![](img/031.png)
 
 *Snack* 
 
-![](032.png)
+![](img/032.png)
 
 *Cassa* 
 
-![](033.png)
+![](img/033.png)
 
 Di seguito viene registrata una nuova vendita dello snack con id 5 effettuata presso la cassa 1 del giorno 2023-03-11:  
 
-![](034.png)
+![](img/034.png)
 
 E di seguito viene aggiornato l’incasso giornaliero corrispettivo della cassa numero 3. Per semplicità si visualizzano gli incassi giornalieri per la cassa numero 3 con la seguente istruzione:
 
-![](035.png)
+![](img/035.png)
 
 *Cassa* 
 
-![](036.png)
+![](img/036.png)
 
 
 **Aggiornamento dei posti in sala in seguito ad una vendita** 
 
 Ogni volta che si esegue una vendita di un biglietto è necessario incrementare il numero di spettatori per quella determinata sala e decrementare opportunamente il numero di posti disponibili. 
 
-![](037.png)
+![](img/037.png)
 
 Per testare il trigger verrà simulata una vendita. In particolare, la vendita verrà registrata in data 09-03-2023 alla cassa 2 e il biglietto acquistato sarà quello avente codice 222. 
 
 Con la seguente istruzione si preleva l’informazione relativa alla sala: 
 
-![](038.png)
+![](img/038.png)
 
 Il risultato di questa query è il seguente: 
 
 *Biglietto* 
 
-![](039.png)
+![](img/039.png)
 
 Il numero della sala è 2, per cui è possibile vedere il numero di posti disponibili e il numero di spettatori attualmente in possesso di un biglietto: 
 
-![](040.png)
+![](img/040.png)
 
 Produce il seguente risultato: *Sala* 
 
-![](041.png)
+![](img/041.png)
 
 Adesso è possibile registrare una nuova vendita: 
 
-![](042.png)
+![](img/042.png)
 
 Questa query produce l’attivazione del trigger che modifica i relativi posti. Il risultato lo visualizzo con la stessa **SELECT** scritta precedentemente: 
 
 *Sala* 
 
-![](043.png)
+![](img/043.png)
 
 **Inserimento in cassa dei dati relativi alla nuova vendita** 
 
-![](044.png)
+![](img/044.png)
 
 Il trigger verrà attivato con valori *di esempio.* Per prima cosa si visualizzano tutte le vendite e tutti i dati presenti nella cassa: 
 
 *Vendita*
 
-![](045.png)
+![](img/045.png)
 
 *Cassa* 
 
-![](046.png)
+![](img/046.png)
 
 *Snack* 
 
-![](047.png)
+![](img/047.png)
 
 Adesso verrà registrata una nuova vendita dello snack con id 3 in data 2023-01-01 presso la cassa 2: 
 
-![](048.png)
+![](img/048.png)
 
 La vendita viene registrata nella tabella Vendita: 
 
 *Vendita* 
 
-![](049.png)
+![](img/049.png)
 
 Alla cassa viene aggiunta la data della vendita visto che non era presente ed è possibile visualizzare tale dato con l’istruzione: 
 
-![](050.png)
+![](img/050.png)
 
 *Cassa* 
 
-![](051.png)
+![](img/051.png)
 
 
 **OPERAZIONI SQL** 
 
 *Inserimento di un nuovo turno di lavoro* 
 
-![](052.png)
+![](img/052.png)
 
 Che produrrà il risultato: 
 
-![](053.png)
+![](img/053.png)
 
 *Modifica del prezzo di uno snack*
 
-![](054.png)
+![](img/054.png)
 
 Che produrrà il seguente risultato: 
 
-![](055.png)
+![](img/055.png)
 
 *Lettura dell’incasso totale giornaliero* 
 
-![](056.png)
+![](img/056.png)
 
-![](057.png)
+![](img/057.png)
 
 *Lettura della media dei feedback per un film* 
 
 Dati i seguenti film: 
 
-![](058.png)
+![](img/058.png)
 
 E i seguenti Feedback: 
 
-![](059.png)
+![](img/059.png)
 
 Usando la seguente query si può rispondere alla richiesta: 
 
-![](060.png)
+![](img/060.png)
 
-![](061.png)
+![](img/061.png)
 
 *Inserimento di un nuovo feedback* 
 
-![](062.png)
+![](img/062.png)
 
 **OPERAZIONI UTILI** 
 
@@ -541,36 +541,36 @@ Usando la seguente query si può rispondere alla richiesta:
 
 Si registrano i seguenti dati: 
 
-![](063.png)
+![](img/063.png)
 
 Dopodiché si può leggere il dato interessato: 
 
-![](064.png)
+![](img/064.png)
 
 *Inserimento di una nuova vendita* 
 
-![](065.png)
+![](img/065.png)
 
 **PROGETTAZIONE LOGICA** 
 
-Turno (**giorno**, **orainizio**, **orafine**, cfoperatore) ![](066.png)
+Turno (**giorno**, **orainizio**, **orafine**, cfoperatore) ![](img/066.png)
 
-Operatore (**cfoperatore**, datanascita, nome, cognome, idcassa) Cassa (![](067.png)**numerocassa**, incassogiornaliero, **giorno**) 
+Operatore (**cfoperatore**, datanascita, nome, cognome, idcassa) Cassa (![](img/067.png)**numerocassa**, incassogiornaliero, **giorno**) 
 
-Vendita (**idvendita**, idcassa, idbiglietto, idsnack, data) ![](068.png)![](069.png)![](070.png)
+Vendita (**idvendita**, idcassa, idbiglietto, idsnack, data) ![](img/068.png)![](img/069.png)![](img/070.png)
 
-Biglietto (**idbiglietto**, prezzo, idsala) ![](071.png)
+Biglietto (**idbiglietto**, prezzo, idsala) ![](img/071.png)
 
 Snack (**idsnack**, nome, prezzo) 
 
-Sala (**idsala**, idfilm, nspettatori, postidisponibili) ![](072.png)
+Sala (**idsala**, idfilm, nspettatori, postidisponibili) ![](img/072.png)
 
-Film (**idfilm**, titolo, genere) ![](073.png)
+Film (**idfilm**, titolo, genere) ![](img/073.png)
 
-Feedback (**idfeedback**, valutazione, idfilm) ![](074.png)![](075.png)
+Feedback (**idfeedback**, valutazione, idfilm) ![](img/074.png)![](img/075.png)
 
 Genere (**idgenere**, nome) 
 
 **PROGETTAZIONE FISICA** 
 
-` `![](076.jpeg)
+` `![](img/076.jpeg)
