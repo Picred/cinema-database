@@ -1,3 +1,3 @@
-# CineAura
+# Cinema database
 
-Trello developing: https://trello.com/b/SrqsWI6I/cinema-fullstack-dev
+A university project
